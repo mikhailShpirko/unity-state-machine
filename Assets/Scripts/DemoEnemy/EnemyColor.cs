@@ -6,6 +6,12 @@ namespace DemoEnemy
     [RequireComponent(typeof(SpriteRenderer))]
     public class EnemyColor : MonoBehaviour
     {
+        [SerializeField]
+        private Color _patrolColor = Color.blue;
+        
+        [SerializeField]
+        private Color _followColor = Color.red;
+        
         private SpriteRenderer _sprite;
 
         private void Awake()
@@ -13,14 +19,19 @@ namespace DemoEnemy
             _sprite = GetComponent<SpriteRenderer>();
         }
 
+        private void SetColor(Color color)
+        {
+            _sprite.color = color;
+        }
+
         public void SetPatrolColor()
         {
-            _sprite.color = Color.blue;
+            SetColor(_patrolColor);
         }
         
         public void SetFollowColor()
         {
-            _sprite.color = Color.red;
+            SetColor(_followColor);
         }
     }
 }

@@ -7,7 +7,6 @@ namespace DemoEnemy
 {
     public class EnemyStateMachine : BaseStateMachine
     {
-
     }
 }
 

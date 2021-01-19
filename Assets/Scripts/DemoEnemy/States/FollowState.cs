@@ -7,12 +7,15 @@ namespace DemoEnemy.States
     {
         [SerializeField]
         private EnemyVision _vision;
+
+        [SerializeField] 
+        private float _followSpeed = 3.5f;
     
         private void Update()
         {
             if (_vision.HasTarget)
             {
-                transform.position = Vector3.MoveTowards(transform.position, _vision.Target.position, Time.deltaTime * 3.5f);
+                transform.position = Vector3.MoveTowards(transform.position, _vision.Target.position, Time.deltaTime * _followSpeed);
             }
         }
     }

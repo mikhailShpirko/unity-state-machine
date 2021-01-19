@@ -7,10 +7,13 @@ namespace DemoEnemy.States
     {
         [SerializeField]
         private WayPoint _currentWayPoint;
+
+        [SerializeField] 
+        private float _patrolSpeed = 2f;
         
         private void Update()
         {
-            transform.position = Vector3.MoveTowards(transform.position, _currentWayPoint.Position, Time.deltaTime * 2f);
+            transform.position = Vector3.MoveTowards(transform.position, _currentWayPoint.Position, Time.deltaTime * _patrolSpeed);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

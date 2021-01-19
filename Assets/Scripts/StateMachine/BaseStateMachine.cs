@@ -11,7 +11,7 @@ namespace StateMachine
         [Header("Set initial state")]
         private BaseState _currentState;
 
-        private void OnEnable()
+        private void Start()
         {
             //enter initial state when scene loaded 
             _currentState?.Enter();
