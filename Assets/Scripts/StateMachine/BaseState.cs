@@ -12,7 +12,13 @@ namespace StateMachine
         
         [SerializeField]
         private VoidEvent _onExit;
-        
+
+        protected virtual void Awake()
+        {
+            //by default all states are disabled
+            Disable();
+        }
+
         private void Enable()
         {
             enabled = true;

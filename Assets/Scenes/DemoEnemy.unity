@@ -216,10 +216,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 753585257}
         m_MethodName: Transition
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 753585256}
+          m_ObjectArgumentAssemblyTypeName: StateMachine.BaseState, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -230,10 +230,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 753585257}
         m_MethodName: Transition
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 753585255}
+          m_ObjectArgumentAssemblyTypeName: StateMachine.BaseState, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -550,11 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a486c07da2976004a86a755b77e50df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stateTransitions:
-  - _source: {fileID: 753585255}
-    _destination: {fileID: 753585256}
-  - _source: {fileID: 753585256}
-    _destination: {fileID: 753585255}
+  _currentState: {fileID: 753585255}
 --- !u!114 &753585258
 MonoBehaviour:
   m_ObjectHideFlags: 0

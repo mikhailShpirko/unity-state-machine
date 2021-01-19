@@ -1206,10 +1206,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206057798}
         m_MethodName: Transition
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1206057795}
+          m_ObjectArgumentAssemblyTypeName: StateMachine.BaseState, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1336,10 +1336,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206057798}
         m_MethodName: Transition
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1206057794}
+          m_ObjectArgumentAssemblyTypeName: StateMachine.BaseState, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1599,10 +1599,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206057798}
         m_MethodName: Transition
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1206057796}
+          m_ObjectArgumentAssemblyTypeName: StateMachine.BaseState, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1777,10 +1777,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1206057798}
         m_MethodName: Transition
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1206057796}
+          m_ObjectArgumentAssemblyTypeName: StateMachine.BaseState, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1798,15 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a78f97dccd010641b32a2801934f885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stateTransitions:
-  - _source: {fileID: 1206057797}
-    _destination: {fileID: 1206057796}
-  - _source: {fileID: 1206057796}
-    _destination: {fileID: 1206057795}
-  - _source: {fileID: 1206057795}
-    _destination: {fileID: 1206057794}
-  - _source: {fileID: 1206057794}
-    _destination: {fileID: 1206057796}
+  _currentState: {fileID: 1206057797}
 --- !u!1 &1547976227
 GameObject:
   m_ObjectHideFlags: 0
