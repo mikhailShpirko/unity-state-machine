@@ -10,7 +10,7 @@ namespace DemoGamePlay.States
         [SerializeField]
         private VoidEvent _onLoaded;
         
-        private void OnEnable()
+        public void LoadResources()
         {
             StartCoroutine(LoadResourcesCoroutine());
         }

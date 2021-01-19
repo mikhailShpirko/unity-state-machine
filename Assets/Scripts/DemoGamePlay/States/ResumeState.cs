@@ -13,7 +13,7 @@ namespace DemoGamePlay.States
         [SerializeField]
         private VoidEvent _onDone;
 
-        private void OnEnable()
+        public void StartCountdown()
         {
             StartCoroutine(CountdownCoroutine());
         }

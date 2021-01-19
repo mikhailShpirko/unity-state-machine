@@ -374,10 +374,10 @@ GameObject:
   - component: {fileID: 753585253}
   - component: {fileID: 753585254}
   - component: {fileID: 753585259}
+  - component: {fileID: 753585258}
   - component: {fileID: 753585257}
   - component: {fileID: 753585256}
   - component: {fileID: 753585255}
-  - component: {fileID: 753585258}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -488,7 +488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2e5b527b34ea54b9e10aaec4200a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextState: {fileID: 753585256}
   _onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -507,6 +506,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _currentWayPoint: {fileID: 1348488156}
+  _patrolSpeed: 2
 --- !u!114 &753585256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5bf2319dfaef643b146fac7e1f54dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextState: {fileID: 753585255}
   _onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -538,6 +537,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _vision: {fileID: 380487697}
+  _followSpeed: 3.5
 --- !u!114 &753585257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a486c07da2976004a86a755b77e50df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentState: {fileID: 753585255}
+  _stateTransitions:
+  - _source: {fileID: 753585255}
+    _destination: {fileID: 753585256}
+  - _source: {fileID: 753585256}
+    _destination: {fileID: 753585255}
 --- !u!114 &753585258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50cf14049eedb114c9f083f13f351243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _patrolColor: {r: 0, g: 0, b: 1, a: 1}
+  _followColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!50 &753585259
 Rigidbody2D:
   serializedVersion: 4

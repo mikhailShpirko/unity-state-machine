@@ -1541,7 +1541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410ae626b6530cd4a9e7f8b3af365a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextState: {fileID: 1206057796}
   _onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -1610,7 +1609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385cab0dbb06d6246ba9f30499e7597d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextState: {fileID: 1206057794}
   _onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -1627,6 +1625,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 819582276}
         m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1206057794}
+        m_MethodName: StartCountdown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1662,7 +1671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50971a25e304654bb8c265ad6db5dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextState: {fileID: 1206057795}
   _onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -1714,7 +1722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe5c7b8273a1d347b6e54726aec52dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextState: {fileID: 1206057796}
   _onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -1731,6 +1738,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 678941306}
         m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1206057797}
+        m_MethodName: LoadResources
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1780,7 +1798,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a78f97dccd010641b32a2801934f885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentState: {fileID: 1206057797}
+  _stateTransitions:
+  - _source: {fileID: 1206057797}
+    _destination: {fileID: 1206057796}
+  - _source: {fileID: 1206057796}
+    _destination: {fileID: 1206057795}
+  - _source: {fileID: 1206057795}
+    _destination: {fileID: 1206057794}
+  - _source: {fileID: 1206057794}
+    _destination: {fileID: 1206057796}
 --- !u!1 &1547976227
 GameObject:
   m_ObjectHideFlags: 0
