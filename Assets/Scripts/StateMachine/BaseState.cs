@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+Source: https://github.com/mikhailShpirko/unity-state-machine
+Component: StateMachine/BaseState.cs
+
+The abstraction for the states with core functionality: 
+- enabling/disabling state
+- events for State Entry and Exit
+
+MIT License
+Copyright (c) 2020 Mikhail Shpirko
+*/
 using Events;
 using UnityEngine;
 

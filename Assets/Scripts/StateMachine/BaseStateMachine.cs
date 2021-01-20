@@ -1,6 +1,14 @@
-﻿using System;
-using System.Reflection;
-using System.Collections.Generic;
+﻿/*
+Source: https://github.com/mikhailShpirko/unity-state-machine
+Component: StateMachine/BaseStateMachine.cs
+
+The abstraction for the state machines with core functionality:
+- storing of current active state
+- transition from one state to another
+
+MIT License
+Copyright (c) 2020 Mikhail Shpirko
+*/
 using UnityEngine;
 
 namespace StateMachine
