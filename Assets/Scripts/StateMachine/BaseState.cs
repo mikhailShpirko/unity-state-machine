@@ -16,7 +16,6 @@ namespace StateMachine
 {
     public abstract class BaseState : MonoBehaviour
     {
-      
         [SerializeField]
         private VoidEvent _onEnter;
         
@@ -39,12 +38,20 @@ namespace StateMachine
             enabled = false;
         }
         
+        /// <summary>
+        /// Enter the state: enable component and trigger entry event
+        /// Should be called when transitioned to it
+        /// </summary>
         public void Enter()
         {
             Enable();
             _onEnter?.Invoke();
         }
-
+        
+        /// <summary>
+        /// Exit the state: disable component and trigger exit event
+        /// Should be called when transitioned from it
+        /// </summary>
         public void Exit()
         {
             Disable();

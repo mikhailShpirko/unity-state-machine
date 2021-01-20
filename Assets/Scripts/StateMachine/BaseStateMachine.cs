@@ -24,6 +24,10 @@ namespace StateMachine
             _currentState?.Enter();
         }
         
+        /// <summary>
+        /// Transition from current state to next state provided as parameter
+        /// </summary>
+        /// <param name="nextState">State to be transitioned to</param>
         public void Transition(BaseState nextState)
         {
             _currentState?.Exit();
