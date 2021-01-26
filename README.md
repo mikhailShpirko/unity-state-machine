@@ -1,5 +1,5 @@
 # State Machine implementation for Unity
-Implementation of tate Machine pattern in Unity. Quick and easy to apply to any Unity project. And most importantly:
+Implementation of State Machine pattern in Unity. Quick and easy to apply to any Unity project. And most importantly:
 - NO ENUMS!
 - NO MASSIVE SWITCH STATEMENTS!
 - NO IMPLEMENTATION OF EMPTY METHODS!
